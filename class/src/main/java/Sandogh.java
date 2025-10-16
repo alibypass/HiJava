@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Sandogh {
+public interface Sandogh {
+    public int gonjayeshsandogh();
 }

@@ -1,4 +1,4 @@
-class Car extends Vehicle{
+class Car extends Vehicle implements GearBox, Sandogh{
 
     Car (String mark) {
         System.out.println("constructor was created without data; ");
@@ -18,4 +18,13 @@ class Car extends Vehicle{
         return true;
     }
 
+    @Override
+    public String typedandeh() {
+        return null;
+    }
+
+    @Override
+    public int  gonjayeshsandogh() {
+        return 60;
+    }
 }

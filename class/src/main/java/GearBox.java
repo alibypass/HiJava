@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class GearBox {
+public interface GearBox {
+    String typedandeh();
 }
