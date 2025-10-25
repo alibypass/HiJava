@@ -2,7 +2,7 @@ public class Car extends Vehicle implements GearBox, Sandogh{
 
     public static int sellscount;
 
-    Car (String mark) {
+    Car (String mark,Dandeh noedandeh) {
         System.out.println("constructor was created without data; ");
         System.out.println(mark + " (car) is created");
     }

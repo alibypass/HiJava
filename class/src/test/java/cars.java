@@ -6,7 +6,7 @@ public class cars {
         @Test
         void work_with_car () {
 
-            Car car = new Car("Sina");
+            Car car = new Car("Sina", Dandeh.MANUAL);
 
             car.open();
 
@@ -14,7 +14,7 @@ public class cars {
 
             System.out.println("---------------------------------------");
 
-            Vehicle pride = new Car("pride");
+            Vehicle pride = new Car("pride", Dandeh.AUTOMATIC);
 
 
 
