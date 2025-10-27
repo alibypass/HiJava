@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
-public class ArrayList {
+public class Lists {
 
     @Test
     void is_empty () {
@@ -63,7 +64,7 @@ public class ArrayList {
 
     @Test
     void immutable () {
-        List<String> animals = new java.util.ArrayList();
+        List<String> animals = new LinkedList<>();
         animals.add("dog");
         animals.add("dog");
         animals.add("dog");
@@ -79,6 +80,20 @@ public class ArrayList {
         Assertions.assertThat(animals.size()).isEqualTo(7);
         Assertions.assertThat(immutable_animals.size()).isEqualTo(7); // true because refrece
 
+    }
+
+    @Test
+    void sorted () {
+        List<String> animals = new LinkedList<>();
+        animals.add("dog");
+        animals.add("dog");
+        animals.add("dog");
+        animals.add("dog");
+        animals.add("cat");
+        animals.add("khar");
+
+        Collections.sort(animals);
+        System.out.println(animals);
     }
 
 
