@@ -14,4 +14,10 @@ public class EnumTest {
         System.out.println("in Persian: ");
         Dandeh.print_fa();
     }
+
+    @Test
+    void  print_fa2 () {
+        System.out.println("in Persian2: ");
+        Dandeh.print_fa2();
+    }
 }
