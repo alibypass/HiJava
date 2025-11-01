@@ -51,6 +51,7 @@ public class Lists {
         animals.add("cat");
         animals.add("khar");
 
+
         Collections.reverse(animals);
 
         System.out.println(animals.indexOf("dog"));
@@ -93,76 +94,8 @@ public class Lists {
         System.out.println(animals);
     }
 
-    @Test
-    void hash_set () {
-        Set<String> animals = new HashSet<>();
-        animals.add("khar");
-        animals.add("asb");
-        animals.add("cat");
-        animals.add("cat");
 
-        for (String animal : animals) {
-            System.out.println(animal);
-        }
 
-    }
-
-    @Test
-    void linked_hash_set () {
-        Set<String> animals = new LinkedHashSet<>();
-        animals.add("khar");
-        animals.add("asb");
-        animals.add("cat");
-        animals.add("cat");
-
-        for (String animal : animals) {
-            System.out.println(animal);
-        }
-    }
-
-    @Test
-    void thee_set () {
-        Set<String> animals = new TreeSet<>();
-        animals.add("khar");
-        animals.add("asb");
-        animals.add("cat");
-        animals.add("cat");
-
-        for (String animal : animals) {
-            System.out.println(animal);
-        }
-    }
-
-    @Test
-    void linked_map () {
-        Map<String, String> geometriks = new LinkedHashMap<>();
-        geometriks.put("mosalas", "ghermez");
-        geometriks.put("mostatil", "zard");
-        geometriks.put("sheshzel", "sabz");
-        geometriks.put("moraba", "ghermez");
-
-            Set<Map.Entry<String, String>> entries = geometriks.entrySet();
-            for (Map.Entry<String, String> entry : entries) {
-                String key = entry.getKey();
-                String value = entry.getValue();
-                System.out.println("Key is " + key + " and value is " + value);
-            }
-        }
-    @Test
-    void hash_map () {
-        Map<String, String> geometriks = new HashMap<>();
-        geometriks.put("mosalas", "ghermez");
-        geometriks.put("mostatil", "zard");
-        geometriks.put("sheshzel", "sabz");
-        geometriks.put("moraba", "ghermez");
-
-        Set<Map.Entry<String, String>> entries = geometriks.entrySet();
-        for (Map.Entry<String, String> entry : entries) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            System.out.println("Key is " + key + " and value is " + value);
-        }
-    }
 
 
 }
