@@ -11,6 +11,8 @@ public class Calculator {
         } catch (NumberFormatException nfe) {
             System.out.println("number invalid");
             throw nfe;
+        } catch (Exception e) {
+            System.out.println("abnormal error");
         } finally {
             System.out.println("retry ??");
         }
