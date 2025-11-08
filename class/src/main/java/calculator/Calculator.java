@@ -10,6 +10,9 @@ public class Calculator {
             n2 = Double.parseDouble(num2);
         } catch (NumberFormatException nfe) {
             System.out.println("number invalid");
+            throw nfe;
+        } finally {
+            System.out.println("retry ??");
         }
         double result = n1 + n2;
         return String.valueOf(result);
