@@ -2,13 +2,11 @@ package io;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class FileWriter {
+public class FileWriterTest {
     @Test
     void should_write_in_file () {
         try (FileOutputStream fileOutputStream = new FileOutputStream("text.txt");) {
