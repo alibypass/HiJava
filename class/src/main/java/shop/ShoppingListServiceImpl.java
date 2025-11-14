@@ -12,5 +12,9 @@ public class ShoppingListServiceImpl implements ShoppingListService{
     @Override
     public void savedItems(List<Item> items) {
 
+        for (Item item: items) {
+            Item.check();
+
+        }
     }
 }

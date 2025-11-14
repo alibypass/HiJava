@@ -1,4 +1,4 @@
 package shop;
 
-public class ItemNameException {
+public class ItemNameException extends RuntimeException{
 }
