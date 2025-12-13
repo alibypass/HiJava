@@ -10,6 +10,7 @@ public class PlayerHelper {
     List<Playerr> getplayers() {
         final List<Playerr> players = new LinkedList<>();
         players.add(new Playerr("messi", 110));
+        players.add(new Playerr("messi", 110));
         players.add(new Playerr("ali", 120));
 
         return players;
