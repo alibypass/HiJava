@@ -4,6 +4,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Function;
@@ -61,6 +62,29 @@ public class StreamOperatorShould {
     @Test
     void sort_data () {
 
+        List<Integer> sorted_data_goals = players.stream()
+                .map(Playerr::getGoal)
+                .sorted()
+                .collect(Collectors.toList());
+
+        final List<Integer> expectedresult1 = new LinkedList<>();
+        expectedresult1.add(110);
+        expectedresult1.add(110);
+        expectedresult1.add(120);
+
+        Assertions.assertThat(sorted_data_goals).isEqualTo(expectedresult1);
+
+        List<Integer> sorted_data_goals_reverse = players.stream()
+                .map(Playerr::getGoal)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+
+        final List<Integer> expectedresult2 = new LinkedList<>();
+        expectedresult2.add(120);
+        expectedresult2.add(110);
+        expectedresult2.add(110);
+
+        Assertions.assertThat(sorted_data_goals_reverse).isEqualTo(expectedresult2);
     }
 }
 
