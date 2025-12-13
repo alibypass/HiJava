@@ -65,26 +65,43 @@ public class StreamOperatorShould {
         List<Integer> sorted_data_goals = players.stream()
                 .map(Playerr::getGoal)
                 .sorted()
+                .limit(2)
                 .collect(Collectors.toList());
 
         final List<Integer> expectedresult1 = new LinkedList<>();
         expectedresult1.add(110);
         expectedresult1.add(110);
-        expectedresult1.add(120);
+//        expectedresult1.add(120);
 
         Assertions.assertThat(sorted_data_goals).isEqualTo(expectedresult1);
 
         List<Integer> sorted_data_goals_reverse = players.stream()
                 .map(Playerr::getGoal)
                 .sorted(Comparator.reverseOrder())
+                .skip(2)
                 .collect(Collectors.toList());
 
         final List<Integer> expectedresult2 = new LinkedList<>();
-        expectedresult2.add(120);
-        expectedresult2.add(110);
+//        expectedresult2.add(120);
+//        expectedresult2.add(110);
         expectedresult2.add(110);
 
         Assertions.assertThat(sorted_data_goals_reverse).isEqualTo(expectedresult2);
+
+        List<Integer> sorted_data_goals_reverse_skip_limit = players.stream()
+                .map(Playerr::getGoal)
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .limit(1)
+                .collect(Collectors.toList());
+
+        final List<Integer> skiplimitexpectedresult = new LinkedList<>();
+//        skiplimitexpectedresult.add(120);
+        skiplimitexpectedresult.add(110);
+//        skiplimitexpectedresult.add(110);
+
+        Assertions.assertThat(sorted_data_goals_reverse_skip_limit).isEqualTo(skiplimitexpectedresult);
     }
+
 }
 
